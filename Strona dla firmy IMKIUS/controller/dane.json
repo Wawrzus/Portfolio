@@ -1,0 +1,5 @@
+{
+    "dbhost": "mysql:host=localhost;dbname=pgimkius",
+    "dbuser": "root",
+    "dbpass": "root"
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dodaj_zapytanie_ofertowe.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="dodaj_aktualnosc_iframe" class="formularz" method="post" enctype="multipart/form-data">
+
+        <div class="tytul">
+        <label for="tytul_input" id="tytul_label">Tytuł:</label>
+        <input type="text" id="tytul_input" name="tytul_input">
+        </div>
+
+        <div class="tresc">
+        <label for="tresc_input" id="tresc_label">Treść:</label>
+        <textarea type="text" id="tresc_input" name="tresc_input"></textarea>
+        </div>
+
+        <div class="guziki">
+        <input type="file" name="graf1" value="Dodaj grafikę 1">
+        <input type="file" name="graf2" value="Dodaj grafikę 1">
+        </div>
+
+        <input type="submit" name="dodaj_aktualnosc" value="Dodaj" class="button">
+
+    </form>
+</body>
+</html>

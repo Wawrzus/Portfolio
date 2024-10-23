@@ -1,0 +1,132 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    color: #0031DD;
+}
+
+.menu p:hover {
+    color: var(--kolor);
+}
+
+#link_:hover p {
+    color: #0031DD;
+}
+
+.all {
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+}
+
+.gray_line {
+    width: 2%;
+    height: 1200px;
+    background-color: #BCBCBC;
+    float: left;
+}
+
+.menu {
+    width: 15%;
+    height: 1200px;
+    background-color: #CFCFCF;
+    float: left;
+}
+
+.main {
+    padding: 10px;
+    width: 83%;
+    float: left;
+    background-image: url(../images/gears.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.formularz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tytul, .tresc, .informacja_o_wyniku_postepowania, .nowe_haslo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    gap: 30px;
+    text-align: center;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-size: 20px;
+}
+
+#tytul_label, #tresc_label, #nowy_login_label, #nowe_haslo_label, #informacja_o_wyniku_postepowania_label, #praca_label {
+    font-size: 22px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+}
+
+#tytul_input {
+    width: 600px;
+    height: 30px;
+}
+
+#tresc_input, #informacja_o_wyniku_postepowania_input {
+    width: 600px;
+    height: 400px;
+}
+
+.button {
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 35px;
+    font-size: 18px;
+    color: white;
+    gap: 5px;
+    background-color: #0031DD;
+}
+
+#imkiuspg {
+    width: 110px;
+    height: 100px;
+}

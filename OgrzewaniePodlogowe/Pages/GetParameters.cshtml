@@ -1,0 +1,70 @@
+﻿@page
+@model GetParametersModel
+@{
+    ViewData["Title"] = "Get Parameters";
+}
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<form method="post" asp-page-handler="ChangeIpAddress" id="changeIp" name="changeIp">
+    <div class="row mb-4">
+        <div class="col">
+            <select class="form-select" id="deviceIp" name="deviceIp" required>
+                <option value="@ViewData["returnIp"]" selected>Wybrano: @ViewData["returnIp"]</option>
+                <option value="215">192.168.200.215(Góra koło przebieralni)</option>
+                <option value="216">192.168.200.216(Testowany)</option>
+                <option value="217">192.168.200.217(Dół koło kotłowni)</option>
+                <option value="218">192.168.200.218(Weterynaria na przeciwko gabinetu)</option>
+                <option value="219">192.168.200.219(Weterynaria przy wejściu od recepcji)</option>
+                <option value="220">192.168.200.220(Nieznane)</option>
+                <option value="221">192.168.200.221(KOAG)</option>
+                <option value="222">192.168.200.222(Korytarz góra koło biura prezesa)</option>
+                <option value="223">192.168.200.223(Korytarz góra koło drukarki)</option>
+                <option value="224">192.168.200.224(Korytarz góra przed kuchnią)</option>
+            </select>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" type="submit" id="changeIpBtn" name="changeIpBtn">ZMIEŃ IP</button>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <p>Packet: @ViewData["packet"]</p>
+    <p>Response: @ViewData["response"]</p>
+    <p>Hysteresis: @ViewData["hysteresis"]</p>
+    <p>Scan Interval: @ViewData["scanInterval"]</p>
+    <p>Version: @ViewData["version"]</p>
+</div>
+
+<table class="table table-striped text-center">
+    <thead>
+        <tr>
+            <th scope="col">sensorPin</th>
+            <th scope="col">relayPin</th>
+            <th scope="col">schedule</th>
+            <th scope="col">config</th>
+            <th scope="col">error</th>
+            <th scope="col">beginTime</th>
+            <th scope="col">endTime</th>
+            <th scope="col">threshold</th>
+            <th scope="col">deviceName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < 6; i++)
+        {
+            <tr>
+                <td>@ViewData[$"sensorPin{i}"]</td>
+                <td>@ViewData[$"relayPin{i}"]</td>
+                <td>@ViewData[$"schedule{i}"]</td>
+                <td>@ViewData[$"config{i}"]</td>
+                <td>@ViewData[$"error{i}"]</td>
+                <td>@ViewData[$"beginTime{i}"]</td>
+                <td>@ViewData[$"endTime{i}"]</td>
+                <td>@ViewData[$"threshold{i}"]</td>
+                <td>@ViewData[$"deviceName{i}"]</td>
+            </tr>
+        }
+    </tbody>
+</table>

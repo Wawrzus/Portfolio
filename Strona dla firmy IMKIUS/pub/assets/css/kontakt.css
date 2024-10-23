@@ -1,0 +1,285 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    color: #0031DD;
+}
+
+#link_:hover p {
+    color: #0031DD;
+}
+
+.menu p:hover {
+    color: var(--kolor);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(assets/images/gears.jpg);
+}
+
+.menu_contact {
+    height: 28px;
+    width: 100%;
+    background-color: #BCBCBC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu_contact li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu_contact p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-size: 14px;
+}
+
+.menu {
+    height: 120px;
+    width: 100%;
+    background-color: #CFCFCF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 4px 0 #0031DD;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-size: 21px;
+}
+
+#imkiuspg {
+    width: 110px;
+    height: 100px;
+}
+
+#phone-call, #mail, #pgtech_vec, #pggarden {
+    width: 18px;
+    height: 18px;
+}
+
+#flaga_ue {
+    width: 25px;
+    height: 18px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_second {
+    width: 1060px; 
+}
+
+.headline_zapytanie {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.headline_zapytanie ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.headline_zapytanie h2 {
+    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+}
+
+#naglowek {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+#naglowekspc {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#naglowek:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid #BCBCBC;
+    margin: auto;
+}
+
+#naglowek::after {
+    margin-left: 20px;
+}
+
+.headline_zapytanie h2 {
+    font-size: 28px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+}
+
+.kontakt_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.adresy, .dzialy, .bank {
+    width: 33%;
+}
+
+.adresy p, .dzialy p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+}
+
+.adresy ul, .dzialy ul {
+    list-style: none;
+}
+
+.adresy li, .dzialy li {
+    margin-bottom: 8px;
+}
+
+.bank p {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+    line-height: 17px;
+}
+
+.mapa {
+    margin-top: 60px;
+    width: 100%;
+}
+
+#rodo_naglowek {
+    color: #0031DD;
+    font-size: 18px;
+}
+
+.zapytanie {
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 35px;
+    font-size: 18px;
+    color: white;
+    gap: 5px;
+    background-color: #0031DD;
+    margin-top: 20px;
+}
+
+#download {
+    width: 23px;
+    height: 23px;
+}
+
+.kontakt_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.mapa {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baner_spolka {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headline_zaufalinam h2 {
+    font-size: 28px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+}
+
+.adresy ul, .dzialy ul {
+    list-style: none;
+}
+
+.adresy p, .dzialy p, .bank p {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+footer {
+    background-color: #BCBCBC;
+    width: 100%;
+    padding-top: 60px;
+    margin-top: 90px;
+    padding-bottom: 60px;
+}

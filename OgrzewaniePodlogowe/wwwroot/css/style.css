@@ -1,0 +1,13 @@
+﻿html, body {
+    font-weight: 500;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+/* typical phone screen resolution */
+@media only screen and (max-width : 667px) {
+    html, body {
+        font-size: 10px;
+    }
+}
+

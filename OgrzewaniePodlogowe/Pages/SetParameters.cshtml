@@ -1,0 +1,193 @@
+﻿@page
+@model SetParametersModel
+@{
+    ViewData["Title"] = "Set Parameters";
+    string checkIfAddress = ViewData["checkIfAddress"].ToString();
+}
+
+<link rel="stylesheet" href="/css/style.css" />
+
+<form class="px-2 py-4" method="post" asp-page-handler="ChangeIpAddress" id="changeIp" name="changeIp">
+    <div class="row">
+        <div class="col-5">
+            <select class="form-select" id="deviceIp" name="deviceIp" required>
+                <option value="@ViewData["returnIp"]" selected>Wybrano: @ViewData["returnIp"]</option>
+                <option value="215">192.168.200.215(Góra koło przebieralni)</option>
+                <option value="216">192.168.200.216(Testowany)</option>
+                <option value="217">192.168.200.217(Dół koło kotłowni)</option>
+                <option value="218">192.168.200.218(Weterynaria na przeciwko gabinetu)</option>
+                <option value="219">192.168.200.219(Weterynaria przy wejściu od recepcji)</option>
+                <option value="220">192.168.200.220(Nieznane)</option>
+                <option value="221">192.168.200.221(KOAG)</option>
+                <option value="222">192.168.200.222(Korytarz góra koło biura prezesa)</option>
+                <option value="223">192.168.200.223(Korytarz góra koło drukarki)</option>
+                <option value="224">192.168.200.224(Korytarz góra przed kuchnią)</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary" data-target="modalWindow" type="submit" id="changeIpBtn" name="changeIpBtn">ZMIEŃ IP</button>
+        </div>
+    </div>
+</form>
+
+@if (checkIfAddress.Equals("1"))
+{
+    <form class="px-2" method="post" asp-page-handler="SaveOnDevice" id="saveForm" name="saveForm">
+        <div class="row">
+            <div class="col-4">
+                <label for="hysteresis" class="form-label fs-6">Histereza</label>
+                <input class="form-control" value="@ViewData["hysteresis"]" placeholder="@ViewData["hysteresis"]" type="number" step="0.01" id="hysteresis" name="hysteresis" required />
+            </div>
+        </div>
+        @for (var i = 0; i < 6; i++)
+        {
+            <div class="mt-4">
+                <div class="row mt-2 py-4">
+                    <div class="col-4">
+                        <label for="deviceName-@i">Sensor @i</label>
+                        <input class="form-control" value="@ViewData[$"deviceName-{i}"]" type="text" id="deviceName-@i" name="deviceName-@i" required>
+                    </div>
+                    <div class="col">
+                        <label></label>
+                        <select class="form-select" id="relayPin-@i" name="relayPin-@i">
+                            <option value="@ViewData[$"relayPin-{i}"]">Wyjście @ViewData[$"relayPin-{i}"]</option>
+                            <option value="1">Wyjście 1</option>
+                            <option value="2">Wyjście 2</option>
+                            <option value="3">Wyjście 3</option>
+                            <option value="4">Wyjście 4</option>
+                            <option value="5">Wyjście 5</option>
+                            <option value="6">Wyjście 6</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>od</label>
+                        <input class="form-control" value="@ViewData[$"beginTime-{i}"]" type="time" id="beginTime-@i" name="beginTime-@i" required />
+                    </div>
+                    <div class="col">
+                        <label>do</label>
+                        <input class="form-control" value="@ViewData[$"endTime-{i}"]" type="time" id="endTime-@i" name="endTime-@i" required />
+                    </div>
+                </div>
+
+                @{
+                    string wordConfig = ViewData[$"config-{i}"].ToString();
+                    string wordToCheckConfig = "", zw = "", tp = "", wy = "";
+                    int counterConfig = 0;
+                    for (var j = 0; j < wordConfig.Length; j++)
+                    {
+                        wordToCheckConfig += wordConfig[j];
+                        counterConfig++;
+                        if (counterConfig == 2)
+                        {
+                            if (wordToCheckConfig.Equals("zw"))
+                                zw = "checked";
+                            else if (wordToCheckConfig.Equals("tp"))
+                                tp = "checked";
+                            else if (wordToCheckConfig.Equals("wy"))
+                                wy = "checked";
+                            wordToCheckConfig = "";
+                            counterConfig = 0;
+                        }
+                    }
+                }
+
+                <div class="row mt-2 py-4">
+                    <div class="row">
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="config-zw-@i" name="config-zw-@i" value="1" @zw>
+                            <label class="form-check-label">Zawsze włączone</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="config-tp-@i" name="config-tp-@i" value="2" @tp>
+                            <label class="form-check-label">Tylko pompa</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="config-wy-@i" name="config-wy-@i" value="4" @wy>
+                            <label class="form-check-label">Wyłączone</label>
+                        </div>
+                    </div>
+
+                    @{
+                        string wordSchedule = ViewData[$"schedule-{i}"].ToString();
+                        string wordToCheckSchedule = "", pn = "", wt = "", sr = "", cz = "", pt = "", sb = "", nd = "";
+                        int counterSchedule = 0;
+                        for (var j = 0; j < wordSchedule.Length; j++)
+                        {
+                            wordToCheckSchedule += wordSchedule[j];
+                            counterSchedule++;
+                            if (counterSchedule == 2)
+                            {
+                                if (wordToCheckSchedule.Equals("pn"))
+                                    pn = "checked";
+                                if (wordToCheckSchedule.Equals("wt"))
+                                    wt = "checked";
+                                if (wordToCheckSchedule.Equals("sr"))
+                                    sr = "checked";
+                                if (wordToCheckSchedule.Equals("cz"))
+                                    cz = "checked";
+                                if (wordToCheckSchedule.Equals("pt"))
+                                    pt = "checked";
+                                if (wordToCheckSchedule.Equals("sb"))
+                                    sb = "checked";
+                                if (wordToCheckSchedule.Equals("nd"))
+                                    nd = "checked";
+                                wordToCheckSchedule = "";
+                                counterSchedule = 0;
+                            }
+                        }
+                    }
+
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-pn-@i" name="schedule-pn-@i" value="1" @pn>
+                            <label class="form-check-label">Poniedziałek</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-wt-@i" name="schedule-wt-@i" value="2" @wt>
+                            <label class="form-check-label">Wtorek</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-sr-@i" name="schedule-sr-@i" value="4" @sr>
+                            <label class="form-check-label">Środa</label>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-czw-@i" name="schedule-cz-@i" value="8" @cz>
+                            <label class="form-check-label">Czwartek</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-pt-@i" name="schedule-pt-@i" value="16" @pt>
+                            <label class="form-check-label">Piątek</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-sb-@i" name="schedule-sb-@i" value="32" @sb>
+                            <label class="form-check-label">Sobota</label>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-4">
+                            <input class="form-check-input" type="checkbox" id="schedule-ndz-@i" name="schedule-nd-@i" value="64" @nd>
+                            <label class="form-check-label">Niedziela</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row border-bottom border-primary py-4 mt-2">
+                    <div class="col">
+                        <label class="form-check-label">Temperatura progowa</label>
+                        <input class="form-control" value="@ViewData[$"threshold-{i}"]" placeholder="@ViewData[$"threshold-{i}"]" type="number" step="0.01" id="threshold-@i" name="threshold-@i" required />
+                    </div>
+                    <div class="col">
+                        <p class="fs-1 text-center" style="color: rgb(82, 121, 25);">@ViewData[$"temp-{i}"]℃</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </form>
+}
+else
+{
+    <div class="text-center mt-5 px-5">
+        <p class="alert-danger" style="font-size: 30px;">Wybierz urządzenie / Nie można nawiązać połączenia z urządzeniem</p>
+    </div>
+}

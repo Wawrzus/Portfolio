@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    border: 2px solid black;
+    width: 600px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-l {
+    width: 70%;
+}
+
+.box-r {
+    width: 30%;
+}
+
+#guzik {
+    margin-left: 50px;
+    background-color: #0031DD;
+    border: #0031DD 3px solid;
+    color: white;
+    font-size: 15px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+#guzik:hover {
+    background-color: transparent;
+    border: #0031DD 3px solid;
+    transition: all 0.2s;
+    color: #0031DD;
+}

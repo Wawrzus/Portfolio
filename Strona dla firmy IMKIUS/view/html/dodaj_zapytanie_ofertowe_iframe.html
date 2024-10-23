@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dodaj_zapytanie_ofertowe.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="dodaj_zapytanie_ofertowe_iframe" method="post" class="formularz" enctype="multipart/form-data">
+
+        <label id="tytul_label">Tytuł</label>
+        <input type="text" name="tytul_input" id="tytul_input"></input>
+
+        <div class="box_box">
+
+        <div class="tresc_box">
+
+        <label id="tresc_label">Treść</label>
+        <textarea name="tresc_input" id="tresc_input"></textarea>
+
+        </div>
+        
+        <div class="iow_box">
+        
+        <label id="informacja_o_wyniku_postepowania_label">Informacja o wyniku postępowania</label>
+        <textarea name="informacja_o_wyniku_postepowania_input" id="informacja_o_wyniku_postepowania_input"></textarea>
+
+        </div>
+    </div>
+
+        <input type="file" name="file">
+
+        <input type="submit" class="button" name="submit">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,563 @@
+:root {
+    --kolor: #0031DD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    color: #0031DD;
+}
+
+#link_:hover p {
+    color: #0031DD;
+}
+
+.menu p:hover {
+    color: var(--kolor);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/gears.jpg);
+}
+
+.menu_contact {
+    height: 28px;
+    width: 100%;
+    background-color: #BCBCBC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu_contact li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu_contact p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-size: 14px;
+}
+
+.menu {
+    height: 120px;
+    width: 100%;
+    background-color: #CFCFCF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 4px 0 #0031DD;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+    font-size: 21px;
+}
+
+#imkiuspg {
+    width: 110px;
+    height: 100px;
+}
+
+#phone-call, #mail, #pgtech_vec, #pggarden {
+    width: 18px;
+    height: 18px;
+}
+
+#flaga_ue {
+    width: 25px;
+    height: 18px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_second {
+    width: 1060px; 
+}
+
+.headline_klimatyzacja_gornicza, .headline_automatyka {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.headline_klimatyzacja_gornicza ul, .headline_automatyka ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+
+.headline_klimatyzacja_gornicza h2, .headline_automatyka h2 {
+    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+}
+
+#naglowek {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+#naglowek:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid #BCBCBC;
+    margin: auto;
+}
+
+#naglowek::after {
+    margin-left: 20px;
+}
+
+.headline_klimatyzacja_gornicza h2, .headline_automatyka h2 {
+    font-size: 28px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+}
+
+#zdjecie {
+    height: 240px;
+    width: 260px;
+    border: #BCBCBC solid 3px;
+    border-radius: 5px;
+}
+
+.tresc p {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.machine_box {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zdjecie {
+    width: 35%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.zdjecierev {
+    width: 35%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.tresc {
+    width: 65%;
+}
+
+.tresc p {
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    text-align: justify;
+}
+
+.tresc h3 {
+    font-size: 22px;
+    width: 100%;
+    font-weight: 700;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 5px;
+}
+
+#download {
+    width: 23px;
+    height: 23px;
+}
+
+#mk_button {
+    margin-bottom: 5px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 35px;
+    font-size: 18px;
+    color: white;
+    gap: 5px;
+    background-color: #0031DD;
+}
+
+.naglowek_guzik {
+    display: flex;
+    align-items: center;    
+}
+
+.kontakt_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.mapa {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.baner_spolka {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headline_zaufalinam h2 {
+    font-size: 28px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+}
+
+.adresy ul, .dzialy ul {
+    list-style: none;
+}
+
+.adresy p, .dzialy p, .bank p {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+footer {
+    background-color: #BCBCBC;
+    width: 100%;
+    padding-top: 60px;
+    margin-top: 90px;
+    padding-bottom: 60px;
+}
+
+.pc_version {
+    width: 100%;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.top-line, .middle-line, .bottom-line {
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+    position: relative;
+}
+
+.hamburger-container, .logo-container, .empty-container {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#przejdz {
+    width: 20px;
+    height: 16px;
+}
+
+#wroc {
+    height: 28px;
+    width: 28px;
+}
+
+@media all and (min-width: 1231px) {
+    .mobile_version {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1230px) {
+
+    .mobile-menu-swipe {
+        position: absolute;
+        margin-top: -0.1px;
+        z-index: 1;
+        background-color: #CFCFCF;
+        box-shadow: 3px 3px 4px 0 #0031DD;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        transition: all ease-in-out 2s;
+    }
+
+    .mobile-menu-swipe ul {
+        text-align: left;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .mobile-menu-swipe li {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        color: white;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+        font-size: 21px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .mobile-menu-swipe button {
+        background-color: #0031DD;
+        border: #0031DD 3px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        gap: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        color: white;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 25%);
+        font-size: 21px;
+        padding: 0 5px;
+    }
+
+    #kontakt-swipe-menu {
+        margin-top: 30px;
+    }
+
+    #kontakt-swipe-menu p{
+        font-size: 15px;
+    }
+
+    #kontakt-swipe-menu li {
+        display: flex;
+        gap: 5px;
+    }
+
+    .pc_version {
+        display: none;
+    }
+
+    .mobile_version {
+        width: 100%;
+    }
+
+    .mobile_menu {
+        height: 120px;
+        width: 100%;
+        background-color: #CFCFCF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 4px 4px 5px 0 #0031DD;
+    }
+
+    .mobile_main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #imkiuspg {
+        width: 90px;
+        height: 80px;
+    }
+
+    .mobile_headline_elektronika {
+        width: 80%;
+        margin-top: 60px;
+    }
+    
+    .mobile_headline_elektronika ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+    }
+    
+    .mobile_headline_elektronika h2 {
+        font-weight: 800;
+        font-family: 'Rubik', sans-serif;
+        font-size: 32px;
+    }
+
+    .mobile_headline_elektronika {
+        width: 80%;
+    }
+
+    .mobile_tresc {
+        width: 80%;
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mobile_naglowek_guzik {
+        font-weight: 800;
+        font-family: 'Rubik', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .mobile_tresc p {
+        width: 100%;
+        margin-top: 15px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        text-align: justify;
+    }
+
+    .mobile_zdjecie {
+        width: 80%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile_version footer {
+        background-color: #BCBCBC;
+        width: 100%;
+        padding-top: 60px;
+        margin-top: 90px;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile_adresy {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .mobile_adresy ul {
+        list-style: none;
+    }
+
+    .mobile_dzialy {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .mobile_dzialy ul {
+        list-style: none;
+    }
+
+    .mobile_bank {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .mobile_bank ul {
+        list-style: none;
+    }
+
+    .mobile_mapa {
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Rubik', sans-serif;
+        color: white;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .mobile_mapa ul {
+        list-style: none;
+    }
+}

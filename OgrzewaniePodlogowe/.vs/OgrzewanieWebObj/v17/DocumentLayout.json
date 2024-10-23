@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\szwawrzyczek\\source\\repos\\OgrzewanieWebObj\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9526508C-CE57-4E8B-866B-EB57301BB722}|OgrzewanieWebObj.csproj|c:\\users\\szwawrzyczek\\source\\repos\\ogrzewaniewebobj\\pages\\setparameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9526508C-CE57-4E8B-866B-EB57301BB722}|OgrzewanieWebObj.csproj|solutionrelative:pages\\setparameters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9526508C-CE57-4E8B-866B-EB57301BB722}|OgrzewanieWebObj.csproj|c:\\users\\szwawrzyczek\\source\\repos\\ogrzewaniewebobj\\conversions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9526508C-CE57-4E8B-866B-EB57301BB722}|OgrzewanieWebObj.csproj|solutionrelative:conversions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 189,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Conversions.cs",
+              "DocumentMoniker": "C:\\Users\\szwawrzyczek\\source\\repos\\OgrzewanieWebObj\\Conversions.cs",
+              "RelativeDocumentMoniker": "Conversions.cs",
+              "ToolTip": "C:\\Users\\szwawrzyczek\\source\\repos\\OgrzewanieWebObj\\Conversions.cs",
+              "RelativeToolTip": "Conversions.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T06:20:32.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SetParameters.cshtml",
+              "DocumentMoniker": "C:\\Users\\szwawrzyczek\\source\\repos\\OgrzewanieWebObj\\Pages\\SetParameters.cshtml",
+              "RelativeDocumentMoniker": "Pages\\SetParameters.cshtml",
+              "ToolTip": "C:\\Users\\szwawrzyczek\\source\\repos\\OgrzewanieWebObj\\Pages\\SetParameters.cshtml",
+              "RelativeToolTip": "Pages\\SetParameters.cshtml",
+              "ViewState": "AQIAACsAAAAAAAAAAAAmwEMAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T10:31:00.6Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
